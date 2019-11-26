@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+int sum(int m);
+int main()
+{
+	int m;
+    cout << "Ingrese el numero (0 para terminar): ";
+    cin >> m;
+    
+    if ( m >= m )
+    {
+    	cout << "La suma de digitos del numero " << m << " es: " << sum(m) << endl;
+    	
+    	cout << "Ingrese el numero (0 para terminar): ";
+    	cin >> m;
+    	while (m > 0 )
+    	{
+    	cout << "La suma de digitos del numero " << m << " es: " << sum(m) << endl;
+    	cout << "Ingrese un numero (0 para terminar): ";
+    	cin >> m;
+    	while ( m < 0 )
+    {
+    	cout << "Ingrese un numero positivo (0 para terminar): ";
+    	cin >> m;
+    }
+    	}
+    }
+    return 0;
+}
+
+int sum(int m)
+{
+	if (m<=0)
+    {
+    	
+        return 1;
+
+    }
+    else
+    {
+        int s = 0;
+    	while( m > 0 )
+	{
+		s = s + m % 10;
+		m = m / 10;
+	}
+	return s;
+	
+    }
+	
+}
